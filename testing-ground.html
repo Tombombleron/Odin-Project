@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <script>
+      var thisArr = ["One","Two","Three","Four","Five"];
+      console.log("thisArr.toString() | " + thisArr.toString());
+      console.log("thisArr.join(' ') | " + thisArr.join(' '));
+      console.log('thisArr.pop() | ' + thisArr.pop());
+      console.log('thisArr.push("Five") | ' + thisArr.push('Five') + ' | ' + thisArr);
+      console.log('thisArr.shift() | ' + thisArr.shift() + ' | ' + thisArr);
+      console.log('thisArr.shift("Six") | ' + thisArr.unshift('Six') + ' | ' + thisArr);
+      console.log('thisArr[0] | ' + thisArr[0]);
+      console.log('delete thisArr.shift("Six") | ' + delete thisArr[2] + ' | ' + thisArr);
+      console.log('thisArr.splice(2, 0, "Seven", "Eight") | ' + thisArr.splice(2, 0, 'Seven', 'Eight') + ' | ' + thisArr);
+      console.log('thisArr.splice(0, 1) | ' + thisArr.splice(0, 1) + ' | ' + thisArr);
+      console.log('thisArr.slice(0, 2) | ' + thisArr.slice(0, 2) + ' | ' + thisArr);
+  </script>
+</body>
+</html>

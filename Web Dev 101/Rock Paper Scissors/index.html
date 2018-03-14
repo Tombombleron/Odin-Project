@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <script>
+      function game() {
+          var rounds = 5;
+          var userScore = 0;
+          while (rounds > 0) {
+              var playerInput = "";
+              
+              while (!playerInput) {
+                playerInput = prompt("Please enter your hand", "");
+              }
+      
+              var roundResult = oneRound(playerInput, computerPlay());
+              (roundResult.indexOf("Win")>0) ? userScore++ : "";
+              
+              console.log(roundResult);
+              console.log("Current Score:" + userScore);
+              rounds--;
+          }
+      }
+      function oneRound(playerSelection, computerSelection) {
+          var pSelection = playerSelection.toLowerCase();
+          var cSelection = computerSelection.toLowerCase();
+          if (pSelection == "rock") {
+              if (cSelection == "paper") {
+                  return "You Lose! " + cSelection + " beats " + pSelection;
+              } else if (cSelection == "scissors") {
+                  return "You Win! " + pSelection + " beats " + cSelection;
+              } else {
+                  return "It's a draw!";
+              }
+          }
+          if (pSelection == "paper") {
+              if (cSelection == "scissors") {
+                  return "You Lose! " + cSelection + " beats " + pSelection;
+              } else if (cSelection == "rock") {
+                  return "You Win! " + pSelection + " beats " + cSelection;
+              } else {
+                  return "It's a draw!";
+              }
+          }
+          if (pSelection == "scissors") {
+              if (cSelection == "rock") {
+                  return "You Lose! " + cSelection + " beats " + pSelection;
+              } else if (cSelection == "paper") {
+                  return "You Win! " + pSelection + " beats " + cSelection;
+              } else {
+                  return "It's a draw!";
+              }
+          }
+      }
+      function computerPlay() {
+        var handChoices = ["Rock", "Paper", "Scissors"];
+          
+        return handChoices[Math.round(Math.random()*2)];
+      }
+      
+      game();
+      
+  </script>
+</body>
+</html>
